@@ -1,0 +1,16 @@
+practical no - 6 Implement the Tower of Hanoi puzzle using recursion.
+
+
+def hanoi(n, source, helper, target):
+    if n == 1:
+        print(source, "->", target)
+        return
+
+    hanoi(n-1, source, target, helper)
+    print(source, "->", target)
+    hanoi(n-1, helper, source, target)
+
+n = int(input("Enter number of disks: "))
+hanoi(n, 'A', 'B', 'C')
+
+
